@@ -1,0 +1,15 @@
+# Discharging generated assumption
+
+target=gov.nasa.jpf.sc.StateMachine
+target_args=ICSETutorial.Output
+
+log.info=gov.nasa.jpf.sc
+
+listener=.listener.ChoiceTracker,gov.nasa.jpf.cv.SCSafetyListener
+
+safetyListener1.property=_generatedAssumption1
+vm.store_steps=true 
+
+# avoid statistics during learning process
+report.console.finished=result
+report.console.property_violation=error

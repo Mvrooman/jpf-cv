@@ -1,0 +1,14 @@
+# application properties to run JPF on StateMachine/ICSETutorial.Input via the ScRunCV driver
+
+#
+shell=gov.nasa.jpf.cv.tools.ScRunCV
+
+target=gov.nasa.jpf.sc.StateMachine
+target_args=HMI.VTS
+
+listener=.listener.ChoiceTracker
+assumption.alphabet=pushUp,pullDown,upp,down
+assumption.outputFile=_vtsAssumption
+report.console.property_violation=error
+vm.store_steps=true
+log.info=gov.nasa.jpf.sc

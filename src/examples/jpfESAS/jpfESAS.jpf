@@ -1,0 +1,14 @@
+shell=gov.nasa.jpf.cv.tools.ScRunCV
+
+target=gov.nasa.jpf.sc.StateMachine
+target_args=jpfESAS.CEV_15EOR_LOR
+
+listener=.listener.ChoiceTracker,.cv.AssertionFilteringListener
+assertionFilter.include=lsamRendezvous
+assumption.alphabet=lasJettison,lsamRendezvous
+assumption.outputFile=_CEVgeneratedAssumption
+vm.store_steps=true 
+
+# avoid statistics during learning process
+report.console.finished=result
+report.console.property_violation=error

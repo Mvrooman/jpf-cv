@@ -1,0 +1,16 @@
+# application properties to run JPF on StateMachine/ICSETutorial.Input via the ScRunCV driver
+
+# need that when your program starts JPF but still want the classpaths and configuration arguments 
+shell=gov.nasa.jpf.cv.tools.ScRunCV
+
+target=gov.nasa.jpf.sc.StateMachine
+target_args=ICSETutorial.InputWithProperty
+
+listener=.listener.ChoiceTracker
+assumption.alphabet=send,output,acknowledge
+assumption.outputFile=_generatedAssumption1
+vm.store_steps=true 
+
+# avoid statistics during learning process
+report.console.finished=result
+report.console.property_violation=error
